@@ -1,5 +1,5 @@
 const sentence = "hello there from lighthouse labs\n";
-
+let timeToNextLetter = 500;
 for (const char of sentence) {
 
 
@@ -7,5 +7,6 @@ for (const char of sentence) {
     // print the char here
     // console.log(char)
     process.stdout.write(char);
-  }, 50) // <= 1s delay to make it noticeable. Can dial it down later.
+  }, timeToNextLetter) // <= 1s delay to make it noticeable. Can dial it down later.
+  timeToNextLetter += 500;
 } 
